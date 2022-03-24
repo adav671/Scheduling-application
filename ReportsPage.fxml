@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="509.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.ReportsPageController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="518.0" prefWidth="805.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Text layoutX="284.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports Page" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="reportsTable" layoutX="14.0" layoutY="142.0" prefHeight="200.0" prefWidth="513.0">
+              <columns>
+                <TableColumn fx:id="timCol" prefWidth="170.0" text="Time " />
+                  <TableColumn fx:id="typCol" prefWidth="170.0" text="Type" />
+                  <TableColumn fx:id="custCol" prefWidth="170.0" text="Customer" />
+              </columns>
+            </TableView>
+            <Button fx:id="mainReports" layoutX="226.0" layoutY="464.0" mnemonicParsing="false" onAction="#clickedMainRep" text="Main Menu" />
+            <Button fx:id="exitReports" layoutX="813.0" layoutY="464.0" mnemonicParsing="false" onAction="#clickedExitRep" text="Exit" />
+            <Button fx:id="apptRep" layoutX="493.0" layoutY="464.0" mnemonicParsing="false" onAction="#clickedApptRep" text="Appointments" />
+            <Button fx:id="custRecRep" layoutX="337.0" layoutY="464.0" mnemonicParsing="false" onAction="#clickedCustRecRep" text="Customer Records" />
+            <Label fx:id="numTypes" layoutX="583.0" layoutY="284.0" text="# of Types" />
+            <Text layoutX="107.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule " underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultant " />
+            <ComboBox fx:id="comboR" layoutX="103.0" layoutY="99.0" onAction="#conCombo" prefWidth="150.0" />
+            <Text layoutX="543.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Customers in Datatbase " underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="numCust" layoutX="583.0" layoutY="78.0" text="# of Customers" />
+            <Text layoutX="543.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Appointment Types (Month)" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="custTable" layoutX="559.0" layoutY="104.0" prefHeight="126.0" prefWidth="254.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="260.0" text="Name" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="comboType" layoutX="583.0" layoutY="327.0" onAction="#typCombo" prefWidth="150.0" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

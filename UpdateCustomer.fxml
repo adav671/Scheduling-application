@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.UpdateCustomerController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Text layoutX="81.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Customer">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="81.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+            <Text layoutX="81.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text layoutX="81.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Text layoutX="81.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+            <TextField fx:id="updateName" layoutX="227.0" layoutY="169.0" />
+            <TextField fx:id="updateAddress" layoutX="227.0" layoutY="215.0" />
+            <TextField fx:id="updatePhone" layoutX="227.0" layoutY="261.0" />
+            <Button fx:id="updateCustRec" layoutX="345.0" layoutY="311.0" mnemonicParsing="false" onAction="#clickedUpdateCust" text="Update" />
+            <Button fx:id="exitUpdateCust" layoutX="582.0" layoutY="311.0" mnemonicParsing="false" onAction="#clickedExitUpdateCust" text="Exit" />
+            <Button fx:id="updateApptPage" layoutX="444.0" layoutY="311.0" mnemonicParsing="false" onAction="#clickedApptUpdate" text="Appointments" />
+            <ComboBox fx:id="cityBox" layoutX="227.0" layoutY="113.0" prefWidth="150.0" />
+            <Button fx:id="backUpdateCust" layoutX="263.0" layoutY="311.0" mnemonicParsing="false" onAction="#clickedBackUpdate" text="Back" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

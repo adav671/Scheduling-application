@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.AppointmentsController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Text layoutX="62.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="apptTable" layoutX="42.0" layoutY="66.0" prefHeight="200.0" prefWidth="569.0">
+              <columns>
+                <TableColumn fx:id="timeCol" prefWidth="160.0" text="Time" />
+                  <TableColumn fx:id="conCol" prefWidth="115.0" text="Consultant" />
+                  <TableColumn fx:id="custCol" prefWidth="130.0" text="Customer" />
+                  <TableColumn fx:id="typeCol" prefWidth="162.0" text="Type" />
+              </columns>
+            </TableView>
+            <Button fx:id="addApptSch" layoutX="62.0" layoutY="276.0" mnemonicParsing="false" onAction="#selectAdd" text="Add" />
+            <Button fx:id="updateApptSch" layoutX="140.0" layoutY="276.0" mnemonicParsing="false" onAction="#selectUpdate" text="Update" />
+            <Button fx:id="deleteAppt" layoutX="231.0" layoutY="276.0" mnemonicParsing="false" onAction="#selectDeleteAppt" text="Delete" />
+            <Button fx:id="mainMenu" layoutX="225.0" layoutY="323.0" mnemonicParsing="false" onAction="#selectMain" text="Main Menu" />
+            <Button fx:id="custRecords" layoutX="427.0" layoutY="323.0" mnemonicParsing="false" onAction="#selectCustRecords" text="Customer Records" />
+            <Button fx:id="exitButton" layoutX="582.0" layoutY="323.0" mnemonicParsing="false" onAction="#selectExitSch" text="Exit" />
+            <Button fx:id="reportsSch" layoutX="337.0" layoutY="323.0" mnemonicParsing="false" onAction="#selectReports" text="Reports" />
+            <RadioButton fx:id="allCaldenar" layoutX="218.0" layoutY="31.0" mnemonicParsing="false" onAction="#selectAll" selected="true" text="All">
+               <toggleGroup>
+                  <ToggleGroup fx:id="calendarView" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="monthView" layoutX="277.0" layoutY="31.0" mnemonicParsing="false" onAction="#selectMonth" text="Month" toggleGroup="$calendarView" />
+            <RadioButton fx:id="weekView" layoutX="358.0" layoutY="31.0" mnemonicParsing="false" onAction="#selectWeek" text="Week" toggleGroup="$calendarView" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.CustomerRecordsController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView fx:id="custTable" layoutY="75.0" prefHeight="204.0" prefWidth="640.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name " />
+                <TableColumn fx:id="addressCol" prefWidth="300.0" text="Address" />
+                  <TableColumn fx:id="phoneCol" prefWidth="200.0" text="Phone Number " />
+              </columns>
+            </TableView>
+            <Text layoutX="174.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Records" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="exitCustRec" layoutX="465.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickExitCust" text="Exit" />
+            <Button fx:id="mainCustRec" layoutX="96.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickMainMenu" text="Main Menu" />
+            <Button fx:id="addCustRec" layoutX="211.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickCustAdd" text="Add" />
+            <Button fx:id="updateCust" layoutX="285.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickUpdateCust" text="Update" />
+            <Button fx:id="deleteCustRec" layoutX="382.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickDeleteCust" text="Delete" />
+            <Button fx:id="reportsCustRec" layoutX="223.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickReportsCust" text="Reports" />
+            <Button fx:id="appointmentsCustRec" layoutX="325.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickApptCust" text="Appointments" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
